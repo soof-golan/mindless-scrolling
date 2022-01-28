@@ -20,20 +20,5 @@ jobs:
           node-version: '16.x'
       - name: Install dependencies 📦
         run: yarn install --frozen-lockfile
-      - name: Predeploy
-        run: yarn predeploy
-      - name: yarn test
-  deploy:
-    name: Deploy 🚀
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Set up Node.js ⚙️
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16.x'
-      - name: Install dependencies 📦
-        run: yarn install --frozen-lockfile
       - name: Build and Deploy ✨
         run: yarn deploy
