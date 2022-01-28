@@ -8,7 +8,7 @@ function App() {
       {/*<header className="App-header">*/}
       {/*  /!*<h1>ScrollTube</h1>*!/*/}
       {/*</header>*/}
-      <img src={logo} className='MindlessImage'/>
+      <img src={logo} className='MindlessImage' alt='mindless'/>
     </div>
   );
 }
