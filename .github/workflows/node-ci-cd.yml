@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    name: Build 👷‍♀️
+    name: Build and Deply 👷‍♀️➡🚀
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
