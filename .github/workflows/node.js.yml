@@ -11,21 +11,15 @@ on:
 
 jobs:
   build:
-    name: Test
+    name: Build 👷‍♀️
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
-      - uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v2.3.0
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Node.js ⚙️
+        uses: actions/setup-node@v2
         with:
-          cmd: install # will run `yarn install` command
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: predeploy # will run `yarn build` command
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: test # will run `yarn test` command
+          node-version: '16.x'
+      - name: Install dependencies 📦
+        run: yarn install --frozen-lockfile
           
